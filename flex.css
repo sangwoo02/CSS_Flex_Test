@@ -12,19 +12,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* container Flex 예시 */
+/* 아래의 코드는 flex를 사용하기 위한 기본 전제코드이다. */
+/* flex-grow:1; container의 값어치의 item 수치가 n빵한다. */
+/*
 .container {
     background-color: powderblue;
     height:200px;
@@ -37,13 +28,12 @@
     color:white;
     border:1px solid white;
     
-    /* flex-grow:1; container의 값어치의 item 수치가 n빵한다. */
+    
   }
 
   .item:nth-child(1) {
     flex-basis: 150px;
     flex-shrink: 1;
-    /* flex-basis: 200px; */
 
   }
 
@@ -51,7 +41,41 @@
     flex-basis: 150px;
     flex-shrink: 2;
 
-    /* flex-basis: 200px; */
 
+  }
+  */
+  
+  /* Flex holy grail layout */
+
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header{
+    border-bottom:1px solid gray;
+    padding-right:20px;
+  }
+  footer{
+    border-top: 1px solid gray;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .content{
+    display:flex;
+  }
+  .content nav{
+    border-right:1px solid gray;
+  }
+  .content aside{
+    border-left:1px solid gray;
+  }
+  nav, aside{
+    flex-basis: 150px;
+    flex-shrink: 0;
+  }
+  main {
+    padding:10px;
   }
   
